@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Inventory Tracker</h1>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#add">Add Product</a>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN HTML Docs</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="products">
+      <h2>Products</h2>
+      <input id="filter" type="search" placeholder="Filter by name...">
+      <p id="summary"></p>
+      <table>
+        <thead>
+          <tr><th>SKU</th><th>Name</th><th>Category</th><th>Stock</th><th>Reorder Level</th><th>Status</th></tr>
+        </thead>
+        <tbody id="product-rows"></tbody>
+      </table>
+    </section>
+
+    <section id="add">
+      <h2>Add Product</h2>
+      <form id="product-form">
+        <label>Name <input name="name" type="text" required></label>
+        <label>SKU <input name="sku" type="text" required></label>
+        <label>Stock <input name="stock" type="number" min="0" required></label>
+        <label>Reorder Level <input name="reorderLevel" type="number" min="0" required></label>
+        <label>Category
+          <select name="category">
+            <option>Peripherals</option>
+            <option>Displays</option>
+            <option>Accessories</option>
+          </select>
+        </label>
+        <label>Next Restock <input name="restockDate" type="date"></label>
+        <label>Supplier Email <input name="supplierEmail" type="email"></label>
+        <button type="submit">Add Product</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Inventory Demand Forecasting &middot; FSWD Course Project</p>
+  </footer>
+</body>
+</html>
